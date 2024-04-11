@@ -191,8 +191,37 @@
               <button class="navbar-link" data-nav-link>Certifications</button>
             </li>
             
+            <style>
+              @keyframes glow {
+                0% {
+                  text-shadow: 0 0 10px #ff0000;
+                }
+                25% {
+                  text-shadow: 0 0 20px #ff3333;
+                }
+                50% {
+                  text-shadow: 0 0 30px #ff6666;
+                }
+                75% {
+                  text-shadow: 0 0 20px #ff3333;
+                }
+                100% {
+                  text-shadow: 0 0 10px #ff0000;
+                }
+              }
+            
+              .navbar-link.feed {
+                position: relative;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-image: linear-gradient(to right, red, yellow, blue); /* Text gradient */
+                animation: glow 3s linear infinite;
+              }
+            
+            </style>
+            
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Feed</button>
+              <button class="navbar-link feed" data-nav-link>Feed</button>
             </li>
             
             
